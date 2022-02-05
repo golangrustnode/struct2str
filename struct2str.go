@@ -3,7 +3,6 @@ package struct2str
 import (
 	"errors"
 	"fmt"
-	"github.com/luckydog8686/logs"
 	"reflect"
 	"sort"
 	"strings"
@@ -60,7 +59,6 @@ func GenerateStringFromStructPtr(obj interface{},isPtr bool) (string, error) {
 		}else{
 			msg = fmt.Sprintf("%s&%s=%v",msg, key,iValue.FieldByName(fieldName).Interface())
 		}
-		logs.Info(msg)
 	}
 	return msg, nil
 }
